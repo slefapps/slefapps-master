@@ -8,7 +8,6 @@ export const middleware = (router:any, middleware:any) => {
 export const applyRoutes = (router:Router, routes:any) => {
   for (const route of routes) {
       const {method, path, handler} = route;
-      console.log('first', method, path, handler);
       switch (method) {
         case 'get':
           router.get(path, handler);
